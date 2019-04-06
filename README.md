@@ -1,4 +1,4 @@
-Pydistance
+# Pydistance
 
 > A library for visualizing the closest point to a set of points.
 
@@ -27,10 +27,18 @@ Commands:
   plot      Plot all employee addresses and the best determined office...
 ```
 
-First, location information must be augmented with the latitude and longitude of each. Create a file `addrs.txt` and enrich it usinfg
-`pyd enrich`.
+To use, create a text file and run the plot command.
 
-To plot the closest point, use `pyd plot`.
+```bash
+cat <<EOF
+Toronto, Ontario, Canada
+Palo Alto, California, USA
+Mt. Everest, Nepal
+Berlin, Germany
+EOF > addrs.txt
+pyd plot --adrs-file=addrs.txt
+```
+
 
 ## License
 
